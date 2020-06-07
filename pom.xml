@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.1.14.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>com.example.spring</groupId>
+    <artifactId>spring-source-code-demo</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>spring-source-code-demo</name>
+    <description>project for Spring Boot</description>
+
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <modules>
+        <module>spring-security-study</module>
+    </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+        <groupId>org.aspectj</groupId>
+        <artifactId>aspectjrt</artifactId>
+        <version>1.8.8</version>
+    </dependency>
+
+    <dependency>
+        <groupId>org.aspectj</groupId>
+        <artifactId>aspectjweaver</artifactId>
+        <version>1.8.3</version>
+    </dependency>
+
+
+
+        <!--集成mybatis-->
+
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>2.1.1</version>
+        </dependency>
+
+
+        <!--集成mysql-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!-- springboot 的redis-->
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+
+
+        <!-- 集成谷歌的google布隆过滤器-->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>22.0</version>
+        </dependency>
+
+        <!--集成security-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+
+
+
+        <!--集成jsp-->
+        <!--引入Spring Boot内嵌的Tomcat对JSP的解析包-->
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-jasper</artifactId>
+        </dependency>
+
+
+        <!-- servlet依赖的jar包start -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+        </dependency>
+        <!-- servlet依赖的jar包start -->
+
+        <!-- jsp依赖jar包start -->
+        <dependency>
+            <groupId>javax.servlet.jsp</groupId>
+            <artifactId>javax.servlet.jsp-api</artifactId>
+            <version>2.3.1</version>
+        </dependency>
+        <!-- jsp依赖jar包end -->
+
+        <!--jstl标签依赖的jar包start -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+        </dependency>
+        <!--jstl标签依赖的jar包end -->
+
+        <!--集成lombok-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <!--thymeleaf模板-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+
+
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+
+
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.*</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>src/main/webapp</directory>
+                <targetPath>META-INF/resources</targetPath>
+                <includes>
+                    <include>**/*.*</include>
+                </includes>
+            </resource>
+        </resources>
+
+
+    </build>
+
+</project>

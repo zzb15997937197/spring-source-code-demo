@@ -1,0 +1,7 @@
+
+1. 开启@EnableWebSecurity注解后，可以使用自定义实现的UserDetailService来在LoadUserByUserName方法里处理登录、注销等逻辑。
+
+2. 在自定义的loadUserByUserName方法里， 不能使用mybatis的xml文件查询，经测试，修改成@Select注解，指定字段名即可得到对应的类。
+
+
+3. spring security基于数据库实现用户认证，并且获取到登录用户的对应角色。
